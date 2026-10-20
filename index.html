@@ -1,0 +1,565 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salsa Forever ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at top, #48205f, transparent 65%),
+        linear-gradient(160deg, #080516, #210b2b, #080516);
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.4;
+      background-image:
+        radial-gradient(white 1px, transparent 1.5px),
+        radial-gradient(#ff78c8 1px, transparent 1.5px);
+      background-size: 45px 45px, 73px 73px;
+      animation: twinkle 12s linear infinite;
+    }
+
+    @keyframes twinkle {
+      to {
+        background-position: 100px 150px, -80px 100px;
+      }
+    }
+
+    main {
+      position: relative;
+      width: min(100%, 600px);
+      margin: auto;
+      padding: 35px 16px 45px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 9vw, 58px);
+      margin: 12px 0;
+      color: #fff;
+      text-shadow: 0 0 12px #ff4fa3, 0 0 35px #a855f7;
+    }
+
+    .subtitle {
+      color: #ead8f6;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stars"></div>
+
+  <main>
+    <p>✨ OUR LITTLE UNIVERSE ✨</p>
+    <h1>Salsa Forever ❤️</h1>
+    <p class="subtitle">
+      Two hearts, one rhythm.<br>
+      Every step brings us closer. 💃🕺
+    </p>
+
+    <!-- PART 2 WILL GO HERE -->
+    
+    <div class="dance-floor">
+      <div class="spotlight spotlight-left"></div>
+      <div class="spotlight spotlight-right"></div>
+
+      <div class="disco-ball">✦</div>
+
+      <div class="couple">
+
+        <!-- BOY -->
+        <div class="dancer boy">
+          <div class="head">
+            <div class="hair"></div>
+          </div>
+
+          <div class="body-shape">
+            <div class="arm arm-left"></div>
+            <div class="arm arm-right"></div>
+          </div>
+
+          <div class="leg leg-left"></div>
+          <div class="leg leg-right"></div>
+        </div>
+
+        <!-- GIRL -->
+        <div class="dancer girl">
+          <div class="head">
+            <div class="hair"></div>
+          </div>
+
+          <div class="body-shape">
+            <div class="arm arm-left"></div>
+            <div class="arm arm-right"></div>
+          </div>
+
+          <div class="leg leg-left"></div>
+          <div class="leg leg-right"></div>
+        </div>
+
+      </div>
+
+      <div class="floor-glow"></div>
+      <div class="heart heart-one">♥</div>
+      <div class="heart heart-two">♥</div>
+      <div class="heart heart-three">♥</div>
+    </div>
+
+    <style>
+      .dance-floor {
+        position: relative;
+        height: 310px;
+        margin: 28px 0;
+        overflow: hidden;
+        border: 1px solid #ffffff30;
+        border-radius: 24px;
+        background: linear-gradient(
+          180deg, #170b2c, #38113f 75%, #120820
+        );
+        box-shadow: 0 0 35px #b12aff25;
+        perspective: 700px;
+      }
+
+      .spotlight {
+        position: absolute;
+        top: -50px;
+        width: 130px;
+        height: 300px;
+        opacity: .25;
+        filter: blur(20px);
+        transform-origin: top;
+        animation: lights 4s ease-in-out infinite alternate;
+      }
+
+      .spotlight-left {
+        left: 20%;
+        background: #ff36b7;
+        transform: rotate(25deg);
+      }
+
+      .spotlight-right {
+        right: 15%;
+        background: #4c8dff;
+        transform: rotate(-25deg);
+        animation-delay: -2s;
+      }
+
+      @keyframes lights {
+        to { transform: rotate(-20deg) scaleX(1.4); }
+      }
+
+      .disco-ball {
+        position: absolute;
+        top: 18px;
+        left: 50%;
+        color: #fff0ff;
+        font-size: 30px;
+        text-shadow: 0 0 15px #ff65d2;
+        animation: disco 3s linear infinite;
+      }
+
+      @keyframes disco {
+        to { transform: translateX(-50%) rotate(360deg); }
+      }
+
+      .couple {
+        position: absolute;
+        left: 50%;
+        top: 75px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        transform: translateX(-50%);
+        animation: sway 1.1s ease-in-out infinite alternate;
+      }
+
+      @keyframes sway {
+        from { translate: -4px 0; }
+        to { translate: 4px -5px; }
+      }
+
+      .dancer {
+        position: relative;
+        width: 85px;
+        height: 190px;
+        transform-origin: center 45%;
+      }
+
+      .boy {
+        animation: boyDance 1.1s ease-in-out infinite alternate;
+      }
+
+      .girl {
+        animation: girlDance 1.1s ease-in-out infinite alternate;
+      }
+
+      @keyframes boyDance {
+        from { transform: rotate(-9deg) translateY(3px); }
+        to { transform: rotate(9deg) translateY(-7px); }
+      }
+
+      @keyframes girlDance {
+        from { transform: rotate(10deg) translateY(-5px); }
+        to { transform: rotate(-10deg) translateY(4px); }
+      }
+
+      .head {
+        position: absolute;
+        top: 0;
+        left: 27px;
+        width: 36px;
+        height: 40px;
+        border-radius: 50%;
+        background: #a96d50;
+        box-shadow: 0 0 12px #ff9bcb45;
+        z-index: 2;
+      }
+
+      .boy .hair {
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 36px;
+        height: 15px;
+        border-radius: 50% 50% 25% 25%;
+        background: #17111c;
+      }
+
+      .girl .head {
+        background: #d99770;
+      }
+
+      .girl .hair {
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 46px;
+        height: 62px;
+        border-radius: 50% 50% 45% 45%;
+        background: #321323;
+        z-index: -1;
+      }
+
+      .body-shape {
+        position: absolute;
+        top: 39px;
+        left: 18px;
+        width: 55px;
+        height: 72px;
+        border-radius: 17px 17px 9px 9px;
+        background: linear-gradient(135deg, #37d8ff, #2455c7);
+        box-shadow: 0 0 18px #36dfff65;
+      }
+
+      .girl .body-shape {
+        left: 14px;
+        width: 60px;
+        height: 67px;
+        background: linear-gradient(135deg, #ff9fdb, #e42b8b);
+        border-radius: 20px 20px 10px 10px;
+        box-shadow: 0 0 18px #ff4fa365;
+      }
+
+      .arm {
+        position: absolute;
+        top: 7px;
+        width: 13px;
+        height: 55px;
+        border-radius: 12px;
+        background: #a96d50;
+        transform-origin: top center;
+      }
+
+      .arm-left {
+        left: -7px;
+        transform: rotate(35deg);
+        animation: arms 0.8s ease-in-out infinite alternate;
+      }
+
+      .arm-right {
+        right: -7px;
+        transform: rotate(-48deg);
+        animation: arms 0.8s ease-in-out infinite alternate-reverse;
+      }
+
+      @keyframes arms {
+        to { transform: rotate(65deg); }
+      }
+
+      .girl .arm {
+        background: #d99770;
+      }
+
+      .leg {
+        position: absolute;
+        top: 105px;
+        width: 17px;
+        height: 67px;
+        border-radius: 10px;
+        background: #17182c;
+        transform-origin: top center;
+      }
+
+      .leg-left {
+        left: 26px;
+        animation: steps .55s ease-in-out infinite alternate;
+      }
+
+      .leg-right {
+        left: 49px;
+        animation: steps .55s ease-in-out infinite alternate-reverse;
+      }
+
+      .girl .leg {
+        background: #e94b9a;
+      }
+
+      @keyframes steps {
+        to { transform: rotate(24deg) translateY(-3px); }
+      }
+
+      .floor-glow {
+        position: absolute;
+        bottom: 27px;
+        left: 15%;
+        width: 70%;
+        height: 18px;
+        border-radius: 50%;
+        background: #d52cff;
+        filter: blur(17px);
+        animation: floorPulse 1s ease-in-out infinite alternate;
+      }
+
+      @keyframes floorPulse {
+        to { opacity: .4; transform: scaleX(.7); }
+      }
+
+      .heart {
+        position: absolute;
+        color: #ff65b9;
+        text-shadow: 0 0 12px #ff36b7;
+        animation: floatHeart 3s ease-in-out infinite;
+      }
+
+      .heart-one { left: 13%; bottom: 60px; }
+      .heart-two { right: 14%; bottom: 95px; animation-delay: -1s; }
+      .heart-three { right: 23%; top: 80px; animation-delay: -2s; }
+
+      @keyframes floatHeart {
+        50% { transform: translateY(-22px) scale(1.3); }
+        100% { transform: translateY(0) scale(1); }
+      }
+  </style>
+  
+    <!-- MUSIC PLAYER -->
+    <section class="music-card">
+      <div class="music-icon">♫</div>
+
+      <h2>Our Love Song ❤️</h2>
+      <p id="music-status">One song, a thousand feelings.</p>
+
+      <audio id="love-song" preload="metadata" loop>
+        <source src="voice.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+
+      <div class="music-controls">
+        <button id="play-button" type="button">▶ Play Music</button>
+        <button id="restart-button" type="button">↻ Restart</button>
+      </div>
+
+      <div class="progress-area">
+        <span id="current-time">0:00</span>
+        <input
+          id="music-progress"
+          type="range"
+          min="0"
+          max="100"
+          value="0"
+          aria-label="Music progress"
+        >
+        <span id="duration">0:00</span>
+      </div>
+
+      <p class="music-note">
+        Turn up the volume and let's dance together. 💃🕺
+      </p>
+    </section>
+
+    <style>
+      .music-card {
+        padding: 24px 16px;
+        margin-top: 24px;
+        border-radius: 24px;
+        border: 1px solid #ffffff25;
+        background: #ffffff09;
+        box-shadow: 0 0 28px #c026d325;
+        backdrop-filter: blur(10px);
+      }
+
+      .music-icon {
+        font-size: 42px;
+        color: #ff80c8;
+        text-shadow: 0 0 20px #ff4fa3;
+        animation: musicBounce 1s ease-in-out infinite alternate;
+      }
+
+      @keyframes musicBounce {
+        to { transform: scale(1.15) rotate(8deg); }
+      }
+
+      .music-card h2 {
+        margin: 8px 0;
+        font-size: 23px;
+      }
+
+      #music-status {
+        color: #e7c9f8;
+        font-size: 13px;
+      }
+
+      .music-controls {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .music-controls button {
+        border: 0;
+        border-radius: 30px;
+        padding: 13px 20px;
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        background: linear-gradient(110deg, #ed399e, #8b43e9);
+        box-shadow: 0 0 18px #c026d345;
+      }
+
+      .music-controls button:active {
+        transform: scale(.96);
+      }
+
+      #restart-button {
+        background: #ffffff15;
+        border: 1px solid #ffffff30;
+      }
+
+      .progress-area {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        color: #e7d9f5;
+      }
+
+      #music-progress {
+        flex: 1;
+        min-width: 0;
+        accent-color: #ff63b5;
+        cursor: pointer;
+      }
+
+      .music-note {
+        color: #cdb9df;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+    </style>
+    
+    <script>
+      const song = document.getElementById("love-song");
+      const playButton = document.getElementById("play-button");
+      const restartButton = document.getElementById("restart-button");
+      const statusText = document.getElementById("music-status");
+      const progress = document.getElementById("music-progress");
+      const currentTimeText = document.getElementById("current-time");
+      const durationText = document.getElementById("duration");
+
+      function formatTime(seconds) {
+        if (!Number.isFinite(seconds)) return "0:00";
+
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+
+        return mins + ":" + String(secs).padStart(2, "0");
+      }
+
+      playButton.addEventListener("click", async () => {
+        if (song.paused) {
+          try {
+            await song.play();
+            playButton.textContent = "⏸ Pause Music";
+            statusText.textContent = "Now playing our love song ❤️";
+          } catch (error) {
+            statusText.textContent =
+              "Music couldn't load. Check that voice.mp3 is uploaded correctly.";
+          }
+        } else {
+          song.pause();
+          playButton.textContent = "▶ Play Music";
+          statusText.textContent = "Paused for a little moment 💗";
+        }
+      });
+
+      restartButton.addEventListener("click", () => {
+        song.currentTime = 0;
+
+        if (!song.paused) {
+          song.play().catch(() => {
+            statusText.textContent = "Tap Play Music to start the song.";
+          });
+        } else {
+          statusText.textContent = "Song restarted. Tap Play Music 🎵";
+        }
+      });
+
+      song.addEventListener("loadedmetadata", () => {
+        durationText.textContent = formatTime(song.duration);
+      });
+
+      song.addEventListener("timeupdate", () => {
+        currentTimeText.textContent = formatTime(song.currentTime);
+
+        if (Number.isFinite(song.duration) && song.duration > 0) {
+          progress.value = (song.currentTime / song.duration) * 100;
+        }
+      });
+
+      progress.addEventListener("input", () => {
+        if (Number.isFinite(song.duration) && song.duration > 0) {
+          song.currentTime = (Number(progress.value) / 100) * song.duration;
+        }
+      });
+
+      song.addEventListener("ended", () => {
+        playButton.textContent = "▶ Play Music";
+      });
+
+      song.addEventListener("error", () => {
+        statusText.textContent =
+          "Couldn't load voice.mp3. Check the filename and upload.";
+      });
+    </script>
+  </main>
+</body>
+</html>
